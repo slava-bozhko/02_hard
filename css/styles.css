@@ -1,0 +1,143 @@
+body{
+    background-color: #7D0909;
+    padding: 15px;
+    margin: 0;
+    color: #FFF;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*100 едениц видимой области*/
+    box-sizing: border-box;
+    }
+
+a{
+    transition: all 0.2s linear;
+    }
+
+h1{
+    margin: 0;
+    }
+
+h1 img{
+    max-width: 100%;
+    }
+
+.texcentr{
+    text-align: center;
+    }
+
+nav{
+    background-color: #000000;
+    padding: 15px;
+    }
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;/*Распределяет контент равномерно по оси Х дочернего блока*/
+    flex-wrap: wrap;/* перенос элементов на новую строчку   */
+    }
+
+nav ul li{
+    width: 20%;
+    text-align: center ;
+    }
+
+nav ul li a{
+    color: #FFF;
+    font-size: 20px;
+    text-decoration: none;
+    display: block; /*Превращаем блочную ссылку в текстовый элемент*/
+    border:4px solid transparent;
+    }
+
+figure{
+    margin: 5px;
+    }
+
+figure img{
+    width: 100%;
+    }
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active{
+    border-color: #FFF;
+    }
+
+.leftaside{
+    background-color: #460606;
+    }
+
+.leftaside ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    }
+
+.leftaside ul li{
+    margin-bottom: 15px;
+    }
+
+.leftaside ul li a{
+    color: orange;
+    }
+
+aside{
+    min-width: 25%;
+    }
+
+.leftaside ul li a:hover,
+.leftaside ul li a:focus,
+.leftaside ul li a:active{
+    color: #d3e6da;
+    }
+
+.rigthiaside{
+    background-color: #E3DDDD;
+    color: #333;
+    }
+
+.rigthiaside h2{
+    text-align: center;
+    background-color: #888;
+    font-size: 22px;
+    margin: 0;
+    }
+
+.rigthiaside p::before{
+    content: "";
+    display: block;
+    width: 50%;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #fff;
+    margin: 0 auto 10px;
+    }
+
+.Content{
+    display: flex;
+    flex-grow: 1;
+    align-items: stretch;
+    }
+
+main, aside, footer{
+    padding: 15px;
+    }
+
+footer{
+    background-color: orange;
+    text-align: center;
+    }
+
+/*Адаптация под мобильные устройства*/
+@media screen and (max-width: 760px){
+    .Content{
+        flex-direction: column;
+    }
+
+    nav ul li{
+        width: 45%;
+    }
+}
